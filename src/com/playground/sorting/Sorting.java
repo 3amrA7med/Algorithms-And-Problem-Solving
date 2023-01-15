@@ -12,7 +12,7 @@ public class Sorting {
         System.out.print("Original Array: ");
         System.out.println(Arrays.toString(arr));
         long startTime = System.nanoTime();
-        Integer[] sortedArr = this.selectionSort(arr);
+        Integer[] sortedArr = this.quickSort(arr, 0, arr.length-1);
         long endTime = System.nanoTime();
         System.out.print("Sorted Array: ");
         System.out.println(Arrays.toString(sortedArr));
@@ -63,6 +63,30 @@ public class Sorting {
         }
         return arr;
     }
+
+    Integer[] quickSort(Integer[] arr, int start, int end) {
+        if(end>start) {
+            int q = partition(arr, start, end);
+            quickSort(arr, start, q - 1);
+            quickSort(arr, q+1, end);
+        }
+
+        return arr;
+    }
+
+    int partition(Integer[] arr, int start, int end){
+        int i = start;
+        for(int k = start; k < end; k++) {
+            if (arr[k] <= arr[end]) {
+                swap(arr, k, i);
+                i++;
+            }
+        }
+        swap(arr, end, i);
+        return i;
+    }
+
+
 
     void swap(Integer[] arr, int i, int j) {
         int temp = arr[i];
