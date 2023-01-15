@@ -1,7 +1,6 @@
 package com.playground.sorting;
 
 import java.util.Arrays;
-import java.util.List;
 
 public class Sorting {
 
@@ -13,7 +12,7 @@ public class Sorting {
         System.out.print("Original Array: ");
         System.out.println(Arrays.toString(arr));
         long startTime = System.nanoTime();
-        Integer[] sortedArr = this.insertionSort(arr);
+        Integer[] sortedArr = this.selectionSort(arr);
         long endTime = System.nanoTime();
         System.out.print("Sorted Array: ");
         System.out.println(Arrays.toString(sortedArr));
@@ -49,6 +48,26 @@ public class Sorting {
             arr[j+1] = key;
         }
         return arr;
+    }
+
+    Integer[] selectionSort(Integer[] arr){
+        for(int i = 0; i < arr.length; i++) {
+            int minIndex = i;
+            for(int j = i; j < arr.length; j++) {
+                if(arr[minIndex] > arr[j])
+                    minIndex = j;
+            }
+            if(minIndex != i) {
+                swap(arr, i, minIndex);
+            }
+        }
+        return arr;
+    }
+
+    void swap(Integer[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 
     boolean isCorrect(Integer[] arr) {
