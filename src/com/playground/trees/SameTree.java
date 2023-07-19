@@ -2,6 +2,9 @@ package com.playground.trees;
 
 import com.playground.trees.model.TreeNode;
 
+/**
+ * 100. Same Tree
+ */
 public class SameTree {
 
     // 100% runtime, bad memory but not too far from best ~=1.4mb
