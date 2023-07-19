@@ -1,4 +1,4 @@
-package com.playground.trees;
+package com.playground.trees.easy;
 
 import com.playground.trees.model.TreeNode;
 
