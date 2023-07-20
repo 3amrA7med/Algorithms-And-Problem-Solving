@@ -1,4 +1,4 @@
-package com.exercise.utils;
+package com.playground.utils;
 
 import java.util.Objects;
 

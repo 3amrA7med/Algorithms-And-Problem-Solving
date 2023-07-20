@@ -1,7 +1,7 @@
-package com.exercise.linked_list.two_pointer_technique;
+package com.playground.linked_list.two_pointer_technique;
 
-import com.exercise.linked_list.data_structure.LinkedList;
-import com.exercise.linked_list.data_structure.Node;
+import com.playground.linked_list.data_structure.LinkedList;
+import com.playground.linked_list.data_structure.Node;
 
 public class IntersectionOfTwoLinkedLists {
 

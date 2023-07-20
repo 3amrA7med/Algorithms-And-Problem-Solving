@@ -1,6 +1,6 @@
-package com.exercise.array_101.in_place_operations;
+package com.playground.array_101.in_place_operations;
 
-import com.exercise.array_101.conclusion.FindAllNumbersDisappearedInAnArray;
+import com.playground.array_101.conclusion.FindAllNumbersDisappearedInAnArray;
 
 import java.util.Arrays;
 import java.util.logging.Level;

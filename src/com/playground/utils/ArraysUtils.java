@@ -1,8 +1,8 @@
-package com.exercise.utils;
+package com.playground.utils;
 
 public class ArraysUtils {
 
-    public boolean binarySearch(int arr[], int value) {
+    public boolean binarySearch(int[] arr, int value) {
         int startIndex = 0;
         int endIndex = arr.length - 1;
         int currentIndex;

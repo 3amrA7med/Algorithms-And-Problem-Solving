@@ -1,4 +1,4 @@
-package com.exercise.backtrack;
+package com.playground.backtrack;
 
 /**
  * Test Cases:

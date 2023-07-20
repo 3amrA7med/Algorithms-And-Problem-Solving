@@ -1,4 +1,4 @@
-package com.exercise.backtrack;
+package com.playground.backtrack;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,14 +11,14 @@ public class PhoneLetterCombinations {
 
     PhoneLetterCombinations() {
         this.phoneLettersDirectory = new HashMap<>();
-        this.phoneLettersDirectory.put("2", new ArrayList<String>(){{add("a");add("b");add("c");}});
-        this.phoneLettersDirectory.put("3", new ArrayList<String>(){{add("d");add("e");add("f");}});
-        this.phoneLettersDirectory.put("4", new ArrayList<String>(){{add("g");add("h");add("i");}});
-        this.phoneLettersDirectory.put("5", new ArrayList<String>(){{add("j");add("k");add("l");}});
-        this.phoneLettersDirectory.put("6", new ArrayList<String>(){{add("m");add("n");add("o");}});
-        this.phoneLettersDirectory.put("7", new ArrayList<String>(){{add("p");add("q");add("r");add("s");}});
-        this.phoneLettersDirectory.put("8", new ArrayList<String>(){{add("t");add("u");add("v");}});
-        this.phoneLettersDirectory.put("9", new ArrayList<String>(){{add("w");add("x");add("y");add("z");}});
+        this.phoneLettersDirectory.put("2", new ArrayList<>(){{add("a");add("b");add("c");}});
+        this.phoneLettersDirectory.put("3", new ArrayList<>(){{add("d");add("e");add("f");}});
+        this.phoneLettersDirectory.put("4", new ArrayList<>(){{add("g");add("h");add("i");}});
+        this.phoneLettersDirectory.put("5", new ArrayList<>(){{add("j");add("k");add("l");}});
+        this.phoneLettersDirectory.put("6", new ArrayList<>(){{add("m");add("n");add("o");}});
+        this.phoneLettersDirectory.put("7", new ArrayList<>(){{add("p");add("q");add("r");add("s");}});
+        this.phoneLettersDirectory.put("8", new ArrayList<>(){{add("t");add("u");add("v");}});
+        this.phoneLettersDirectory.put("9", new ArrayList<>(){{add("w");add("x");add("y");add("z");}});
     }
 
     /**

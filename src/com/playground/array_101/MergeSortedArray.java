@@ -1,4 +1,4 @@
-package com.exercise.array_101;
+package com.playground.array_101;
 
 import java.util.Arrays;
 import java.util.logging.Level;

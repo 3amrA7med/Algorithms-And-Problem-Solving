@@ -1,4 +1,4 @@
-package com.exercise.linked_list.data_structure;
+package com.playground.linked_list.data_structure;
 
 import java.util.Objects;
 import java.util.logging.Level;

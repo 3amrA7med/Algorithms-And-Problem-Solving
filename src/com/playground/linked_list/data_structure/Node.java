@@ -1,4 +1,4 @@
-package com.exercise.linked_list.data_structure;
+package com.playground.linked_list.data_structure;
 
 public class Node {
     public Integer val;

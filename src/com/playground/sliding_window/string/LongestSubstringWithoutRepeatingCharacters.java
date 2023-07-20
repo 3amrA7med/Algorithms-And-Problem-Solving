@@ -1,4 +1,4 @@
-package com.exercise.sliding_window.string;
+package com.playground.sliding_window.string;
 
 import java.util.HashMap;
 import java.util.Map;

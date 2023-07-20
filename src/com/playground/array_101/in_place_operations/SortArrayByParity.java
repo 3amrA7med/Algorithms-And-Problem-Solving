@@ -1,4 +1,4 @@
-package com.exercise.array_101.in_place_operations;
+package com.playground.array_101.in_place_operations;
 
 import java.util.Arrays;
 import java.util.logging.Level;

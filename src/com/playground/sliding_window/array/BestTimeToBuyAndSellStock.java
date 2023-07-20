@@ -1,4 +1,4 @@
-package com.exercise.sliding_window.array;
+package com.playground.sliding_window.array;
 
 public class BestTimeToBuyAndSellStock {
 

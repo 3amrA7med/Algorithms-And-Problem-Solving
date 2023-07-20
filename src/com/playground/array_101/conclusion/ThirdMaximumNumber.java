@@ -1,4 +1,4 @@
-package com.exercise.array_101.conclusion;
+package com.playground.array_101.conclusion;
 
 import java.util.Arrays;
 import java.util.Objects;

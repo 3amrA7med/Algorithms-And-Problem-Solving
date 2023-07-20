@@ -1,7 +1,7 @@
-package com.exercise.linked_list.classic_problems;
+package com.playground.linked_list.classic_problems;
 
-import com.exercise.linked_list.data_structure.LinkedList;
-import com.exercise.linked_list.data_structure.Node;
+import com.playground.linked_list.data_structure.LinkedList;
+import com.playground.linked_list.data_structure.Node;
 
 import java.util.Stack;
 

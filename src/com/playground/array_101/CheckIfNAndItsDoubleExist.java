@@ -1,6 +1,6 @@
-package com.exercise.array_101;
+package com.playground.array_101;
 
-import com.exercise.utils.ArraysUtils;
+import com.playground.utils.ArraysUtils;
 
 import java.util.Arrays;
 import java.util.HashMap;

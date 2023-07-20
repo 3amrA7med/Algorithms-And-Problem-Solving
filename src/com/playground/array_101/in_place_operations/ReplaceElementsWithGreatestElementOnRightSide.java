@@ -1,4 +1,4 @@
-package com.exercise.array_101.in_place_operations;
+package com.playground.array_101.in_place_operations;
 
 /**
  * Given an array arr, replace every element in that array with the greatest element among the elements to its right,
