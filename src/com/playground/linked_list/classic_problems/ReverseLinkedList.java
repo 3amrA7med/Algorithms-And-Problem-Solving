@@ -1,4 +1,4 @@
-package com.exercise.linked_list.classic_problems;
+package com.playground.linked_list.classic_problems;
 
 import com.exercise.linked_list.data_structure.Node;
 
@@ -41,5 +41,26 @@ public class ReverseLinkedList {
         }
         head.next = null;
         return newHead;
+    }
+
+
+    Node newHead;
+
+    public Node reverseList(Node head) {
+        if(head == null) return null;
+        reverseListRec(head);
+        head.next = null;
+        return newHead;
+    }
+
+    public Node reverseListRec(Node head) {
+        if( head == null ) return null;
+
+        Node node = reverseListRec(head.next);
+        if(node != null)
+            node.next = head;
+        else
+            newHead = head;
+        return head;
     }
 }
