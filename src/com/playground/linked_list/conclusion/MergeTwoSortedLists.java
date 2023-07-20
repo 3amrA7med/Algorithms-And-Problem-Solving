@@ -51,12 +51,13 @@ public class MergeTwoSortedLists {
     }
 
     /**
-     * not prefered if solution could be found in O(N)
-     * Because in real life, the length of a linked list could be much longer than we expected, in which case the recursive approach is likely to introduce a stack overflow. (Imagine a file system)
+     * not preferred if solution could be found in O(N)
+     * Because in real life, the length of a linked list could be much longer than we expected,
+     * in which case the recursive approach is likely to introduce a stack overflow. (Imagine a file system)
      * But anyway, as long as we communicate this concerning properly with the interviewer, I don't think it's a big deal here.
-     * @param l1
-     * @param l2
-     * @return
+     * @param l1 first list in merge
+     * @param l2 second list in merge
+     * @return return the new head.
      */
     public Node mergeTwoLists2(Node l1, Node l2){
         if(l1 == null) return l2;

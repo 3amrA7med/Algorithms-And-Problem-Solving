@@ -28,14 +28,14 @@ public class CopyListWithRandomPointer {
 
     /**
      *
-     * Intutive solution is to use hashmap to save oldNode -> CopyNode Mapping in it
+     * Intuitive solution is to use hashmap to save oldNode -> CopyNode Mapping in it
      * Applying interweaving
      *
      * 100% faster
      * 77% better memory
      *
-     * @param head
-     * @return
+     * @param head pointer to the head of the linked list.
+     * @return return copied head.
      */
     public RandomNode copyRandomList(RandomNode head) {
         if(head == null) return null;
