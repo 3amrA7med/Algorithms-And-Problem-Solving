@@ -1,4 +1,4 @@
-package com.playground.trees;
+package com.playground.trees.trie;
 
 import java.util.HashMap;
 import java.util.Map;
