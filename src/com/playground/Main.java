@@ -1,13 +1,13 @@
 package com.playground;
 
-import com.exercise.sliding_window.string.LongestSubstringWithoutRepeatingCharacters;
+import com.playground.backtrack.medium.Subsets;
 
 public class Main {
 
     public static void main(String[] args) {
 	    // write your code here
-        LongestSubstringWithoutRepeatingCharacters longestSubstringWithoutRepeatingCharacters = new LongestSubstringWithoutRepeatingCharacters();
-        longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring("pwwkew");
+        Subsets obj = new Subsets();
+        obj.run();
     }
 
 }
