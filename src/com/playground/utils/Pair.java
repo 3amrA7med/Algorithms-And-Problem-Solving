@@ -3,8 +3,8 @@ package com.playground.utils;
 import java.util.Objects;
 
 public class Pair<T> {
-    T x;
-    T y;
+    public T x;
+    public T y;
 
     @Override
     public String toString() {
@@ -25,5 +25,10 @@ public class Pair<T> {
         if (o == null || getClass() != o.getClass()) return false;
         Pair<?> pair = (Pair<?>) o;
         return Objects.equals(x, pair.x) && Objects.equals(y, pair.y);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
     }
 }
