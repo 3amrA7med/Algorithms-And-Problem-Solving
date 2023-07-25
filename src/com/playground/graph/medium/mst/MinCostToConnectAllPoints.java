@@ -1,4 +1,4 @@
-package com.playground.graph.mst;
+package com.playground.graph.medium.mst;
 
 import java.util.HashSet;
 import java.util.PriorityQueue;
@@ -34,7 +34,7 @@ public class MinCostToConnectAllPoints {
         int minDistance = Integer.MAX_VALUE;
         int minDistancePoint = 0;
 
-        // O(n^2 logn)
+        // O(n^2 log n)
         for(int i = 0; i < points.length; i++) {
             for(int j = 0; j < points.length; j++) {
                 if(i==j) continue;

@@ -1,4 +1,4 @@
-package com.playground.graph.medium;
+package com.playground.graph.medium.dijkstra;
 
 import java.util.Arrays;
 import java.util.HashSet;
