@@ -1,4 +1,4 @@
-package com.playground.backtrack;
+package com.playground.backtrack.medium;
 
 /**
  * Test Cases:
@@ -38,6 +38,47 @@ public class WordSearch {
         System.out.println(this.existDepthFirstSearch(board, word));
     }
 
+    /**
+     * 99ms Beats 97.56%
+     * 40.61mb Beats 61.56%
+     * @param board board of chars
+     * @param word word to find
+     * @return if found return true.
+     */
+    public boolean exist(char[][] board, String word) {
+        if(board.length * board[0].length < word.length()) return false;
+        char[] wordArr = word.toCharArray();
+        for(int r = 0; r < board.length; r++)
+            for(int c = 0; c < board[0].length; c++)
+                if(existBackTrackRec(board, wordArr, r, c, 0)) return true;
+        return false;
+    }
+
+    public boolean existBackTrackRec(char[][] board, char[] word, int r, int c, int wordIndex) {
+        if(wordIndex >= word.length) return true;
+        if(r < 0 || c < 0 || r >= board.length || c >= board[0].length) return false;
+        if(board[r][c] != word[wordIndex]) return false;
+
+        char temp = board[r][c];
+        board[r][c] = '#';
+        if(existBackTrackRec(board, word, r + 1, c, wordIndex + 1)) return true;
+        if(existBackTrackRec(board, word, r - 1, c, wordIndex + 1)) return true;
+        if(existBackTrackRec(board, word, r, c + 1, wordIndex + 1)) return true;
+        if(existBackTrackRec(board, word, r, c - 1, wordIndex + 1)) return true;
+        board[r][c] = temp;
+        return false;
+    }
+
+    // ==========================================================================
+
+
+    /**
+     * 115 ms Beats 96.89%
+     * 40.5 MB Beats 87.56%
+     * @param board
+     * @param word
+     * @return
+     */
     public boolean existDepthFirstSearch(char[][] board, String word) {
         boolean flag = false;
         for(int i = 0; i<  board.length; i++) {
