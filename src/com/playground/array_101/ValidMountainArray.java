@@ -24,6 +24,35 @@ public class ValidMountainArray {
         LOGGER.log(Level.INFO, String.valueOf(validMountainArray2(arr)));
     }
 
+    /**
+     * 1ms Beats 100.00%
+     * 44.19mb Beats 98.85%
+     */
+    public boolean validMountainArray3(int[] arr) {
+        if(arr.length < 3) return false;
+        int i = 0;
+        int prevVal = -1;
+        boolean upHill = true;
+
+        for(; i < arr.length; i++) {
+            if(upHill) {
+                if(arr[i] > prevVal) {
+                    prevVal = arr[i];
+                    continue;
+                }
+                else upHill = false;
+            }
+
+            if(!upHill) {
+                if(i == 1) break;
+                if(arr[i] < prevVal) prevVal = arr[i];
+                else break;
+            }
+        }
+
+        return (i == arr.length) && !upHill;
+    }
+
     boolean validMountainArray1(int[] arr) {
         if(arr.length < 3) return false;
         boolean firstPass = false;
@@ -46,8 +75,6 @@ public class ValidMountainArray {
 
     /**
      * faster 2ms while validMountainArray1 is 3ms.
-     * @param arr
-     * @return
      */
     public boolean validMountainArray2(int[] arr) {
         int index = 0;

@@ -9,9 +9,7 @@ import java.util.logging.Logger;
 
 /**
  * Given an array arr of integers, check if there exists two integers N and M such that N is the double of M ( i.e. N = 2 * M).
- *
  * More formally check if there exists two indices i and j such that :
- *
  * i != j
  * 0 <= i, j < arr.length
  * arr[i] == 2 * arr[j]
@@ -21,7 +19,7 @@ import java.util.logging.Logger;
 public class CheckIfNAndItsDoubleExist {
 
     private static final Logger LOGGER = Logger.getLogger(CheckIfNAndItsDoubleExist.class.getName());
-    private ArraysUtils arraysUtils = new ArraysUtils();
+    private final ArraysUtils arraysUtils = new ArraysUtils();
 
     public void run() {
         int[] arr = new int[] {-20,8,-6,-14,0,-19,14,4};
@@ -30,8 +28,6 @@ public class CheckIfNAndItsDoubleExist {
 
     /**
      * Using hash map.
-     * @param arr
-     * @return
      */
     public boolean checkIfExistHashTable(int[] arr) {
         HashMap<Integer, Integer> numsMap = new HashMap<>();
@@ -64,8 +60,6 @@ public class CheckIfNAndItsDoubleExist {
 
     /**
      * Fastest solution and best memory management.
-     * @param arr
-     * @return
      */
     public boolean checkIfExistNestedLoops(int[] arr) {
         for(int i = 0; i< arr.length; i++) {

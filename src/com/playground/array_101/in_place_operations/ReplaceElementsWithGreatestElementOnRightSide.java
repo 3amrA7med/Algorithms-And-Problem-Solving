@@ -21,6 +21,10 @@ package com.playground.array_101.in_place_operations;
  */
 public class ReplaceElementsWithGreatestElementOnRightSide {
 
+    /**
+     * 2 ms Beats 82.59%
+     * 53.9 MB Beats 6.56%
+     */
     public int[] replaceElements(int[] arr) {
         int currentMax = -1;
         int temporaryElement;

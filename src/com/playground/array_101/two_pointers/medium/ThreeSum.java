@@ -16,8 +16,6 @@ public class ThreeSum {
     /**
      * 31ms Beats 99.09%
      * 51.84mb Beats 19.61%, best 48mb
-     * @param nums
-     * @return
      */
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();

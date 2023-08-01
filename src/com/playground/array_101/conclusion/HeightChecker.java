@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * 1051. Height Checker
+ */
 public class HeightChecker {
 
     private static final Logger LOGGER = Logger.getLogger(HeightChecker.class.getName());
@@ -15,9 +18,8 @@ public class HeightChecker {
     }
 
     /**
+     * 1 ms Beats 91.21%
      * Excellent runtime, but 34% memory
-     * @param heights
-     * @return
      */
     public int heightChecker(int[] heights) {
         int[] freq = new int[101];

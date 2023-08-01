@@ -14,3 +14,7 @@
   which we need to try to find the longest palindrome for each character as 
   mid-character for the palindrome in case of odd, special case for even,
   no dp in this solution
+
+## Problems to solve again
+
+- 

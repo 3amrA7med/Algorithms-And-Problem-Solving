@@ -6,8 +6,6 @@ public class ContainsDuplicate {
     /**
      * 10ms Beats 91.26%
      * 54.90mb Beats 79.63%
-     * @param nums
-     * @return
      */
     public boolean containsDuplicate(int[] nums) {
         Map<Integer, Boolean> map = new HashMap<>();

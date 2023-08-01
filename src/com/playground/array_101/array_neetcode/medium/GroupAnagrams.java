@@ -22,7 +22,6 @@ public class GroupAnagrams {
     public List<List<String>> groupAnagrams1(String[] strs) {
         Map<String, List<String>> map = new HashMap<>();
 
-
         for(int i = 0; i < strs.length; i++) {
             char[] wordChars = strs[i].toCharArray();
             Arrays.sort(wordChars);

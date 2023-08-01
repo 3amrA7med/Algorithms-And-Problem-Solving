@@ -2,7 +2,6 @@ package com.playground.array_101.medium;
 
 /**
  * 287. Find the Duplicate Number
- *
  * Floyd's algorithm from linked lists
  */
 public class FindTheDuplicateNumber {
@@ -11,8 +10,6 @@ public class FindTheDuplicateNumber {
      * Floyds algorithm, constant space with no modifying to array itself.
      * space Beats 61.93%
      * memory Beats 76.48%
-     * @param nums
-     * @return
      */
     public int findDuplicateFloyd(int[] nums) {
         int s = 0;

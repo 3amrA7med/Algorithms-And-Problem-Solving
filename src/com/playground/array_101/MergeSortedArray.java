@@ -19,6 +19,10 @@ public class MergeSortedArray {
     }
 
 
+    /**
+     * 0 ms Beats 100%
+     * 42.9 MB Beats 6.74%
+     */
     public void merge(int[] numArray1, int m, int[] numArray2, int n) {
         int firstIndex = m-1;
         int secondIndex = n-1;

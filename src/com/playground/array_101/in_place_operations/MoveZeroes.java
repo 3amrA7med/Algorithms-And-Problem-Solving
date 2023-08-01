@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  */
 public class MoveZeroes {
     private static final Logger LOGGER = Logger.getLogger(MoveZeroes.class.getName());
-    private ArraysUtils arraysUtils = new ArraysUtils();
+    private final ArraysUtils arraysUtils = new ArraysUtils();
 
     public void run() {
         int[] arr = new int[] {-20,8,-6,-14,0,-19,14,4};
@@ -76,8 +76,8 @@ public class MoveZeroes {
     }
 
     /**
-     * excellent solution.
-     * @param nums
+     * 1 ms Beats 100%
+     * 43.7 MB Beats 99.37%
      */
     public void moveZeroes3(int[] nums){ // 0 1 0 3 12  ->
         int indexToFirstZero = 0;

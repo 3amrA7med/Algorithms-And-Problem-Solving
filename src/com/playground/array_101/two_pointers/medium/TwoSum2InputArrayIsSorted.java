@@ -10,9 +10,6 @@ public class TwoSum2InputArrayIsSorted {
     /**
      * 1ms Beats 99.27%
      * 45.29mb Beats 90.31%
-     * @param numbers
-     * @param target
-     * @return
      */
     public int[] twoSum(int[] numbers, int target) {
         int l = 0;

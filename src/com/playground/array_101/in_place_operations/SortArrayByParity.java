@@ -24,6 +24,10 @@ public class SortArrayByParity {
         LOGGER.log(Level.INFO, Arrays.toString(arr));
     }
 
+    /**
+     * 1 ms Beats 97.48%
+     * 42.9 MB Beats 99.56%
+     */
     public int[] sortArrayByParity(int[] nums) {
         int backIterator = nums.length - 1;
         int frontIterator = 0;

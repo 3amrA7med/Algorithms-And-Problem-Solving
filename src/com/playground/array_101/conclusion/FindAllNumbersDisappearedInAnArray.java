@@ -6,6 +6,9 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * 448. Find All Numbers Disappeared in an Array
+ */
 public class FindAllNumbersDisappearedInAnArray {
 
     private static final Logger LOGGER = Logger.getLogger(FindAllNumbersDisappearedInAnArray.class.getName());
@@ -17,8 +20,6 @@ public class FindAllNumbersDisappearedInAnArray {
 
     /**
      * Excellent solution, maybe math.abs in the other solution slow the code down a bit.
-     * @param nums
-     * @return
      */
     public List<Integer> findDisappearedNumbers(int[] nums) {
         List<Integer> result = new ArrayList<>();

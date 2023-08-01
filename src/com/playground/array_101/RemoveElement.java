@@ -15,9 +15,6 @@ public class RemoveElement {
 
     /**
      * This method maintain the order but the actual length calculated is wrong.
-     * @param nums
-     * @param val
-     * @return
      */
     public int removeElementWithSameOrder(int[] nums, int val) {
         int actualLength = nums.length;
@@ -60,10 +57,8 @@ public class RemoveElement {
     }
 
     /**
-     * excellent
-     * @param nums
-     * @param val
-     * @return
+     * 0 ms Beats 100%
+     * 42.7 MB Beats 6.25%
      */
     public int removeElement3(int[] nums, int val) {
         int k = 0;
