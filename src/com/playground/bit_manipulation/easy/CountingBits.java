@@ -5,7 +5,6 @@ package com.playground.bit_manipulation.easy;
  */
 public class CountingBits {
 
-
     /**
      * 2ms Beats 59.11%
      * 46.29mb Beats 90.12%
@@ -29,7 +28,6 @@ public class CountingBits {
      * 3ms Beats 36.51%
      * 46.54mb Beats 49.66%
      */
-
     public int[] countBits(int n) {
         int[] result = new int[n+1];
         result[0] = 0;
@@ -41,7 +39,7 @@ public class CountingBits {
     public int hammingWeight(int n) {
         int result = 0;
         int val = n;
-        while( val != 0) {
+        while(val != 0) {
             val = val & (val-1);
             result++;
         }
