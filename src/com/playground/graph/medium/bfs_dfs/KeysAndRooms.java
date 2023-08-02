@@ -1,4 +1,4 @@
-package com.playground.graph.medium;
+package com.playground.graph.medium.bfs_dfs;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
