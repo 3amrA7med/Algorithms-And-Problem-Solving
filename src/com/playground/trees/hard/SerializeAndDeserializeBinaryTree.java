@@ -75,11 +75,11 @@ public class SerializeAndDeserializeBinaryTree {
 // TreeNode ans = deser.deserialize(ser.serialize(root));
 }
 
-
+/*
 /**
  * This implementation is right except for extreme edge cases, -1000 <= node.val <= 1000
  * fails with [-1000, null, -1000]
- */
+
 class SerializeAndDeserializeBinaryTree2 {
     public static class Codec {
         final static Integer NULL_VALUE = -1001;
@@ -136,10 +136,11 @@ class SerializeAndDeserializeBinaryTree2 {
             return root;
         }
     }
-
-// Your Codec object will be instantiated and called as such:
+    // Your Codec object will be instantiated and called as such:
 // Codec ser = new Codec();
 // Codec deser = new Codec();
 // TreeNode ans = deser.deserialize(ser.serialize(root));
 
 }
+ */
+

@@ -6,7 +6,6 @@ import java.util.Set;
 
 /**
  * 1584. Min Cost to Connect All Points
- *
  * Better solution would be adding all possible edges to one priority queue no need for multiple ones.
  */
 public class MinCostToConnectAllPoints {
@@ -59,7 +58,7 @@ public class MinCostToConnectAllPoints {
             minDistance = Integer.MAX_VALUE;
             minDistancePoint = 0;
             for(Integer point: setOfVisitedPoints) {
-                // Get rif of edges that is not safe anyway.
+                // Get rid of edges that is not safe anyway.
                 while(graph[point]!=null && setOfVisitedPoints.contains(graph[point].peek().connectedPoint))
                     graph[point].poll();
                 if(graph[point]!=null && graph[point].peek().weight < minDistance) {
