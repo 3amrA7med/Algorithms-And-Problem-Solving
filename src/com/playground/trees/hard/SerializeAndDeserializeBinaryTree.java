@@ -51,7 +51,7 @@ public class SerializeAndDeserializeBinaryTree {
             queue.addLast(root);
 
             int arrIndex = 1;
-            while(arrIndex < arr.length) {
+            while(arrIndex < arr.length - 1) {
                 TreeNode node = queue.removeFirst();
                 String left = arr[arrIndex++];
                 String right = arr[arrIndex++];

@@ -4,6 +4,20 @@ import java.util.PriorityQueue;
 
 /**
  * 767. Reorganize String
+ * ================================
+ * Given a string s, rearrange the characters of s so that any two adjacent characters are not the same.
+ * Return any possible rearrangement of s or return "" if not possible.
+ * ==================================
+ * Example 1:
+ * Input: s = "aab"
+ * Output: "aba"
+ * Example 2:
+ * Input: s = "aaab"
+ * Output: ""
+ * ==========================================
+ * Constraints:
+ * 1 <= s.length <= 500
+ * s consists of lowercase English letters.
  */
 public class ReorganizeString {
 
@@ -11,7 +25,7 @@ public class ReorganizeString {
         System.out.println(reorganizeString("baaba"));
     }
 
-    class Element {
+    static class Element {
         char character;
         int count;
 
@@ -31,7 +45,7 @@ public class ReorganizeString {
         char[] arr = s.toCharArray();
         char[] newArr = new char[arr.length];
 
-        for(int i = 0; i < arr.length; i++) freq[arr[i] - 'a']++;
+        for (char c : arr) freq[c - 'a']++;
 
         for(int i = 0; i < 26; i++) if(freq[i] != 0) pQueue.offer(new Element((char)(i + 'a'), freq[i]));
 

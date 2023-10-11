@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * 322. Coin Change
  */
-public class CoinChange {
+public class  CoinChange {
     /**
      * VERY BAD 5% ~200ms
      */

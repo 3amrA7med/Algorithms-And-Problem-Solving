@@ -6,8 +6,8 @@ import java.util.logging.Logger;
 /**
  * Given an array of integers arr, return true if and only if it is a valid mountain array.
  * <br> Recall that arr is a mountain array if and only if:
- * <br> arr.length >= 3
- * <br> There exists some i with 0 < i < arr.length - 1 such that:
+ * <br> arr. length >= 3
+ * <br> There exists some i with 0 < i < arr. length - 1 such that:
  * <br> arr[0] < arr[1] < ... < arr[i - 1] < arr[i]
  * <br> arr[i] > arr[i + 1] > ... > arr[arr.length - 1]
  * <br> Input: arr = [0,3,2,1] Output: true

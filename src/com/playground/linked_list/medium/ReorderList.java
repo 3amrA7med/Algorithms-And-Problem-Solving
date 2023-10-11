@@ -5,9 +5,19 @@ import com.playground.linked_list.data_structure.Node;
 
 /**
  * 143. Reorder List
- *
  * Beats 31.36%, 2ms
  * Beats 52.52%, 46mb, best 44
+ * ====================
+ * You are given the head of a singly linked-list. The list can be represented as:
+ * L0 → L1 → … → Ln - 1 → Ln
+ * Reorder the list to be on the following form:
+ * L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
+ * You may not modify the values in the list's nodes. Only nodes themselves may be changed.
+ * ============================
+ * a better idea would be using floyds algorithm to iterate and get the middle of the list,
+ * - slow pointer at first element
+ * - fast pointer at the next
+ * - stop when fast == null or fast.next == null
  */
 public class ReorderList {
 

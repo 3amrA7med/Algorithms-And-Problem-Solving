@@ -5,6 +5,7 @@ package com.playground.binary_search.medium;
  */
 public class SearchInRotatedSortedArray {
 
+
     public int search(int[] nums, int target) {
 
         if(target == nums[0]) return 0;

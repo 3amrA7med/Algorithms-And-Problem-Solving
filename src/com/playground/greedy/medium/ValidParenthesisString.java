@@ -23,8 +23,7 @@ public class ValidParenthesisString {
            if(leftMin < 0) leftMin = 0;
        }
 
-        if(leftMin == 0) return true;
-        return false;
+        return leftMin == 0;
     }
 
 

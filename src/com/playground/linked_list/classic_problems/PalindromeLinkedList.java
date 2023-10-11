@@ -5,6 +5,17 @@ import com.playground.linked_list.data_structure.Node;
 
 import java.util.Stack;
 
+/**
+ * 234. Palindrome Linked List
+ * ===============================
+ * Given the head of a singly linked list, return true if it is a
+ * palindrome or false otherwise.
+ * ==================================
+ * Input: head = [1,2,2,1]
+ * Output: true
+ * ==================================
+ * optimal will be using floyd algorithm (slow & fast pointers)
+ */
 public class PalindromeLinkedList {
 
     public void run() {
@@ -19,9 +30,46 @@ public class PalindromeLinkedList {
     }
 
     /**
+     * Runtime 3ms Beats 99.99%
+     * Memory 56.16MB Beats 81.55%
+     */
+    public boolean isPalindrome4(Node head) {
+        if(head == null || head.next == null)
+            return true;
+
+        Node prevSlow = null;
+        Node slow = head;
+        Node fast = head;
+        while(fast!=null && fast.next !=null)
+        {
+            fast = fast.next.next;
+
+            Node nextSlow = slow.next;
+            slow.next = prevSlow;
+            prevSlow = slow;
+            slow = nextSlow;
+        }
+
+        if(fast!=null)
+        {
+            slow = slow.next;
+        }
+
+        while(prevSlow!=null && slow!=null)
+        {
+            if(prevSlow.val != slow.val){
+                return false;
+            }
+            prevSlow = prevSlow.next;
+            slow = slow.next;
+        }
+        return true;
+    }
+
+    /**
      * Better solution, Faster also lower memory consumption.
-     * @param head
-     * @return
+     * Runtime 20 ms Beats 6.44%
+     * Memory 57.4 MB Beats 42.68%
      */
     public boolean isPalindrome(Node head) {
         if(head.next == null) return true;
@@ -51,6 +99,10 @@ public class PalindromeLinkedList {
         return true;
     }
 
+    /**
+     * Runtime 33 ms Beats 5.5%
+     * Memory 104.3 MB Beats 5.25%
+     */
     Node firstIterator;
     public boolean isPalindrome2(Node head) {
         firstIterator = head;
@@ -63,5 +115,24 @@ public class PalindromeLinkedList {
         boolean isEqualFlag = curr.val == firstIterator.val;
         firstIterator = firstIterator.next;
         return accumulatedAnswerFlag && isEqualFlag;
+    }
+
+
+    /**
+     * Runtime 10 ms Beats 19.11%
+     * Memory 63.5 MB Beats 5.25%
+     */
+    boolean res = true;
+    public boolean isPalindrome3(Node head) {
+        isPalindromeRec2(head, head);
+        return res;
+    }
+
+    public Node isPalindromeRec2(Node curr, Node head) {
+        if(curr == null) return head;
+
+        Node palindromeNode = isPalindromeRec2(curr.next, head);
+        if(palindromeNode.val != curr.val) res = false;
+        return palindromeNode.next;
     }
 }

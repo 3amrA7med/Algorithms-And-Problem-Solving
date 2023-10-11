@@ -22,7 +22,6 @@ public class RepeatedDNASequences {
                 strings.add(currentDnaSeq);
         }
 
-
         return new ArrayList<>(repeatedStrings);
     }
 }

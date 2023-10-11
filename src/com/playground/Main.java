@@ -1,13 +1,16 @@
 package com.playground;
 
-import com.playground.binary_search.medium.SuccessfulPairsOfSpellsAndPotions;
-import com.playground.dynamic_programming.medium.EditDistance;
+import com.playground.graph.medium.bfs_dfs.NumberOfProvinces;
+import com.playground.graph.medium.union_find.MinimumScoreOfAPathBetweenTwoCities;
+import com.playground.greedy.medium.PartitionLabels;
+import com.playground.heap.medium.KClosestPointsToOrigin;
+import com.playground.trees.medium.CheckCompletenessOfABinaryTree;
 
 public class Main {
 
     public static void main(String[] args) {
 	    // write your code here
-        SuccessfulPairsOfSpellsAndPotions obj = new SuccessfulPairsOfSpellsAndPotions();
+        KClosestPointsToOrigin obj = new KClosestPointsToOrigin();
         obj.run();
     }
 

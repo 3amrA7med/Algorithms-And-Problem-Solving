@@ -6,9 +6,23 @@ import java.util.Set;
 
 /**
  * 743. Network Delay Time
+ * ========================
+ * You are given a network of n nodes, labeled from 1 to n. You are also given times,
+ * a list of travel times as directed edges times[i] = (ui, vi, wi), where ui is the source node,
+ * vi is the target node, and wi is the time it takes for a signal to travel from source to target.
+ * We will send a signal from a given node k. Return the minimum time it takes for all the n nodes
+ * to receive the signal. If it is impossible for all the n nodes to receive the signal, return -1.
+ * =================
+ * Input: times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2
+ * Output: 2
+ * Example 2:
+ * Input: times = [[1,2,1]], n = 2, k = 1
+ * Output: 1
+ * Example 3:
+ * Input: times = [[1,2,1]], n = 2, k = 2
+ * Output: -1
  */
 public class NetworkDelayTime {
-
 
  public void run() {
         //[[2,1,1],[2,3,1],[3,4,1]]
@@ -20,6 +34,64 @@ public class NetworkDelayTime {
 
         System.out.println(result);
     }
+
+    /**
+     * Runtime 9ms Beats 94.85%
+     * Memory 46.48MB Beats 71.42%
+     */
+    public int networkDelayTime(int[][] times, int n, int k) {
+        int[] distances = new int[n + 1];
+        Arrays.fill(distances, Integer.MAX_VALUE);
+        boolean[] visited = new boolean[n + 1];
+        distances[k] = 0;
+
+        dijkstra(times, distances, visited);
+
+        return getResult(distances);
+    }
+
+    public void dijkstra(int[][] times, int[] distances, boolean[] visited) {
+        int minIndex = getMinDistanceNode(distances, visited);
+        while(minIndex != -1) {
+            for(int[] time: times){
+                int src = time[0];
+                int dst = time[1];
+                int delay = time[2];
+                if(src != minIndex) continue;
+
+                if(distances[dst] > distances[src] + delay) distances[dst] = distances[src] + delay;
+            }
+
+            visited[minIndex] = true;
+            minIndex = getMinDistanceNode(distances, visited);
+        }
+    }
+
+
+
+    public int getMinDistanceNode(int[] distances, boolean[] visited) {
+        int minDistance = Integer.MAX_VALUE;
+        int index = -1;
+        for(int i = 1; i < distances.length; i++) {
+            if(!visited[i] && distances[i] < minDistance) {
+                minDistance = distances[i];
+                index = i;
+            }
+        }
+        return index;
+    }
+
+    public int getResult(int[] distances) {
+        int maxDistance = 0;
+        for(int i = 1; i < distances.length; i++) {
+            if(distances[i] == Integer.MAX_VALUE) return -1;
+            if(distances[i] > maxDistance) {
+                maxDistance = distances[i];
+            }
+        }
+        return maxDistance;
+    }
+
      class Node {
         int val;
         Node next = null;
@@ -32,7 +104,11 @@ public class NetworkDelayTime {
         }
     }
 
-    public int networkDelayTime(int[][] times, int n, int k) {
+    /**
+     * Runtime 7 ms Beats 96.33%
+     * Memory 48.2 MB Beats 11.17%
+     */
+    public int networkDelayTime2(int[][] times, int n, int k) {
         Node [] graph = new Node[n+1];
         int[] distances = new int[n+1];
         Arrays.fill(distances, Integer.MAX_VALUE);

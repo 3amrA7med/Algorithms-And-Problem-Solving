@@ -4,6 +4,11 @@ package com.playground.greedy.medium;
  * 55. Jump Game
  */
 public class JumpGame {
+
+    /**
+     * Runtime 3 ms Beats 43.29%
+     * Memory 43.8 MB Beats 82.99%
+     */
     public boolean canJump(int[] nums) {
         if(nums.length <= 1) return true;
         int l = 0, r = 0;

@@ -3,6 +3,18 @@ package com.playground.linked_list.classic_problems;
 import com.playground.linked_list.data_structure.LinkedList;
 import com.playground.linked_list.data_structure.Node;
 
+/**
+ * 328. Odd Even Linked List
+ * ============================
+ * Given the head of a singly linked list, group all the nodes with odd indices together followed by the nodes
+ * with even indices, and return the reordered list.
+ * The first node is considered odd, and the second node is even, and so on.
+ * Note that the relative order inside both the even and odd groups should remain as it was in the input.
+ * You must solve the problem in O(1) extra space complexity and O(n) time complexity.
+ * ==============================
+ * Input: head = [1,2,3,4,5]
+ * Output: [1,3,5,2,4]
+ */
 public class OddEvenLinkedList {
 
         public void run() {
@@ -21,9 +33,28 @@ public class OddEvenLinkedList {
         }
 
     /**
+     * Runtime 0 ms Beats 100%
+     * Memory 41.5 MB Beats 99.80%
+     */
+    public Node oddEvenList(Node head) {
+        if(head == null || head.next == null) return head; // Base case.
+        Node currOdd = head;
+        Node evenHead = head.next;
+        Node currEven = head.next; // Iterator for even list.
+
+        while(currEven != null && currEven.next != null) {
+            currOdd.next = currEven.next;
+            currOdd = currOdd.next;
+            currEven.next = currEven.next.next;
+            currEven = currEven.next;
+        }
+        currOdd.next = evenHead;
+        return head;
+    }
+
+    /**
      * Designed for even odd values in the list.
-     * @param head
-     * @return
+     * Not a working solution for this problem.
      */
     public Node oddEvenValuesList(Node head) {
             if(head == null || head.next == null) return head; // Base case.
@@ -61,20 +92,4 @@ public class OddEvenLinkedList {
             prev.next = fakeEvenHead.next;
             return head;
         }
-
-    public Node oddEvenList(Node head) {
-        if(head == null || head.next == null) return head; // Base case.
-        Node currOdd = head;
-        Node evenHead = head.next;
-        Node currEven = head.next; // Iterator for even list.
-
-        while(currEven != null && currEven.next != null) {
-            currOdd.next = currEven.next;
-            currOdd = currOdd.next;
-            currEven.next = currEven.next.next;
-            currEven = currEven.next;
-        }
-        currOdd.next = evenHead;
-        return head;
-    }
 }

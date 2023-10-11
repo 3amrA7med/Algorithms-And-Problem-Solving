@@ -7,9 +7,11 @@ import java.util.Set;
 
 /**
  * 128. Longest Consecutive Sequence
+ * [ 100, 4, 200, 3, 2, 1]   => 4 [1,2,3,4]
  */
 public class LongestConsecutiveSequence {
     /**
+     * Best solution as it removes element from set and makes it much more efficient as we go through loop
      * 24ms Beats 78.50%
      * 59.84mb Beats 43.34%
      * @param nums
@@ -131,6 +133,40 @@ public class LongestConsecutiveSequence {
                 currLcs++;
             }
             if(lcs < currLcs) lcs = currLcs;
+        }
+
+        return lcs;
+    }
+
+    /**
+     * 301ms
+     * Beats 13.29%of users with Java
+     * Memory
+     * Details
+     * 62.70MB
+     * Beats 10.11%
+     */
+    public int longestConsecutive4(int[] nums) {
+        Set<Integer> set = new HashSet<>();
+
+        for(int i = 0; i < nums.length; i++)
+            set.add(nums[i]);
+
+        int lcs = 0;
+
+        for(int i = 0; i < nums.length; i++) {
+            int prevVal = nums[i] - 1;
+            // If not start of the sequence.
+            if(set.contains(prevVal)) continue;
+
+            int count = 1;
+            int nextVal = nums[i] + 1;
+            while(set.contains(nextVal)) {
+                count++;
+                nextVal++;
+            }
+
+            if(count > lcs) lcs = count;
         }
 
         return lcs;

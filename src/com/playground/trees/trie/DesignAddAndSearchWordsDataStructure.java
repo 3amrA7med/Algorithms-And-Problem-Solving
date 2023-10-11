@@ -81,7 +81,7 @@ public class DesignAddAndSearchWordsDataStructure {
                     return false;
                 iterator = iterator.map.get(chars[i]);
             }
-            return iterator.isWord;
+             return iterator.isWord;
         }
     }
 }

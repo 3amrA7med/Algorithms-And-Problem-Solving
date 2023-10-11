@@ -7,7 +7,6 @@ import com.playground.trees.model.TreeNode;
  */
 public class BalancedBinaryTree {
     // 93 % 1ms bad memory but not too far from best.
-
     public boolean isBalanced(TreeNode root) {
 
         return checkDifference(root) != -1;

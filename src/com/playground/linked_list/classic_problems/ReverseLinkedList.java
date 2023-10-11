@@ -4,9 +4,14 @@ import com.playground.linked_list.data_structure.Node;
 
 /**
  * Both solutions are pretty fast(same runtime) but the recursion provides better memory usage.
+ * 206. Reverse Linked List
+ * ============================
+ * Given the head of a singly linked list, reverse the list, and return the reversed list.
+ * ===========================
+ * Input: head = [1,2,3,4,5]
+ * Output: [5,4,3,2,1]
  */
 public class ReverseLinkedList {
-
 
     public Node reverseListLoop(Node head) {
         // Empty list.
@@ -42,7 +47,6 @@ public class ReverseLinkedList {
         head.next = null;
         return newHead;
     }
-
 
     Node newHead;
 

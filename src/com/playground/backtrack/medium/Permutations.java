@@ -5,7 +5,11 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 46. Permutations
+ * 46. Permutations [IMPORTANT]
+ * Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
+ * =======
+ * Input: nums = [1,2,3]
+ * Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
  */
 public class Permutations {
 
@@ -17,8 +21,6 @@ public class Permutations {
     /**
      * 1ms Beats 98.84%
      * 43.78mb Beats 84.99%
-     * @param nums
-     * @return
      */
     public List<List<Integer>> permute(int[] nums) {
         for(int i = 0; i < nums.length; i++) {

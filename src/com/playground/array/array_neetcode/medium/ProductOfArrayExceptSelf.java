@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class ProductOfArrayExceptSelf {
     public void run() {
+        // output [0, 0, 9, 0, 0]
         System.out.println(Arrays.toString(productExceptSelf(new int[]{-1, 1, 0, -3, 3})));
     }
 
